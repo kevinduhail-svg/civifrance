@@ -1,0 +1,28 @@
+/* CiviFrance — pages publiques (confidentialité, conditions)
+   Mêmes couleurs que l'application : papier crème, lueur abricot, terracotta. */
+:root {
+  --accent: #C66E47; --accent-clair: #E58B62; --texte: #3B4552; --gris: #7A8593;
+  --fond: #FBF6EC; --lueur: rgba(248, 208, 178, .55); --carte: #FFFFFF; --bord: #E8DFD0; --alerte: #FBF0D6;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --accent: #EE9A73; --accent-clair: #EE9A73; --texte: #F3EEE4; --gris: #AEB5C2; --fond: #1C2230;
+    --lueur: rgba(192, 138, 106, .2); --carte: #262E3F; --bord: #353F54; --alerte: #3A3220; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--texte); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(ellipse 120% 380px at 50% -40px, var(--lueur), transparent 70%) no-repeat, var(--fond); }
+header { padding: 32px 16px 8px; }
+header .in, main { max-width: 760px; margin: 0 auto; }
+header a { color: var(--texte); text-decoration: none; font-weight: 900; font-size: 26px; }
+header p { margin: 2px 0 0; color: var(--accent); font-style: italic; }
+main { padding: 16px 16px 48px; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 4px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+.maj { color: var(--gris); margin: 0 0 24px; }
+section, .carte { background: var(--carte); border: 1px solid var(--bord); border-radius: 22px; padding: 4px 20px 12px; margin: 16px 0;
+  box-shadow: 0 6px 18px rgba(59, 69, 82, .06); }
+.alerte { background: var(--alerte); border-radius: 16px; padding: 12px 16px; font-weight: 700; }
+a { color: var(--accent); }
+ul { padding-left: 22px; }
+footer { color: var(--gris); font-size: 14px; text-align: center; padding: 24px 16px 40px; }
+.liens a { display: inline-block; margin: 6px 12px; font-weight: 800; }
